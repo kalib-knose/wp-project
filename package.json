@@ -9,6 +9,7 @@
     "deploy": "sst deploy",
     "remove": "sst remove",
     "console": "sst console",
+    "test": "sst bind vitest run --threads=false",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
