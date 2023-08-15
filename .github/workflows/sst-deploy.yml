@@ -24,13 +24,13 @@ jobs:
         node-version: '16'
 
     - name: Install dependencies
-      run: npm install
+      run: yarn
       
     # - name: Run tests
     #   run: npm test
 
   deploy:
-    # needs: test
+    needs: test
     runs-on: ubuntu-latest
     
     steps:
@@ -50,7 +50,7 @@ jobs:
         echo "Deploying to Staging..."
         # Your actual deployment script for staging
         # Example:
-        # sst deploy --stage staging
+        yarn  sst deploy --stage staging
 
     - name: Deploy to UAT
       if: github.ref == 'refs/heads/uat'
