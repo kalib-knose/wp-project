@@ -55,7 +55,7 @@ jobs:
       if: github.ref == 'refs/heads/staging'
       run: |
         echo "Deploying to Staging..."
-        sst deploy --stage staging
+        yarn deploy --stage staging
 
     # - name: Deploy to UAT
     #   if: github.ref == 'refs/heads/uat'
