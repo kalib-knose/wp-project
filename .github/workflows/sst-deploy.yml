@@ -44,6 +44,10 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: ap-southeast-2  # or your preferred region
 
+
+    - name: Debug AWS Key
+      run: echo ${{ secrets.AWS_ACCESS_KEY_ID }}
+
     - name: Deploy to Staging
       if: github.ref == 'refs/heads/staging'
       run: |
